@@ -51,11 +51,14 @@ public class JKTV20YearsWeather {
                 
             }
             yearsWeather[i]= new int[dayinMonth];
+            double sum = 0.0;
             System.out.printf("%8s: ",Month.values()[i]);
             for (int j = 0; j < yearsWeather[i].length; j++){
                 yearsWeather[i][j] = random.nextInt(max - min +1)+ min;
+                sum += yearsWeather[i][j];
                 System.out.printf("%4d",yearsWeather[i][j]);
             }
+            System.out.println(" | %2f "+sum/dayinMonth);
             System.out.println();
         }       
         }
